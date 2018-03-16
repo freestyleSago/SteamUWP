@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SteamUWP.Services;
+using SteamUWP.UI.Pages;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +27,30 @@ namespace SteamUWP.UI
         public MainPage()
         {
             this.InitializeComponent();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            if (e.NavigationMode == NavigationMode.Back)
+            {
+                return;
+            }
+            if (e.NavigationMode == NavigationMode.New)
+            {
+                UserService.GetUserAsync();
+            }
+        }
+
+        private void NavigationView_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
+        {
+            if (args.IsSettingsSelected)
+            {
+                return;
+            }
+            else
+            {
+                this.Frame.Navigate(typeof(DetailPage));
+            }
         }
     }
 }

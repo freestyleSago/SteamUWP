@@ -106,7 +106,8 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="ViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\SteamUWP.ViewModels.rd.xml" />
   </ItemGroup>

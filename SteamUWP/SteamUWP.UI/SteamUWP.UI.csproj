@@ -98,15 +98,39 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\DetailPage.xaml.cs">
+      <DependentUpon>DetailPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <None Include="Assets\Images\UWP tile and icon asset generator\Guidelines for tile and icon assets - Windows app development.url" />
+    <None Include="Assets\Images\UWP tile and icon asset generator\Readme.docx" />
+    <None Include="Assets\Images\UWP tile and icon asset generator\Readme.pdf" />
+    <None Include="Assets\Images\UWP tile and icon asset generator\Templates\Logo-AppList.psd" />
+    <None Include="Assets\Images\UWP tile and icon asset generator\Templates\Logo-NoMargins.psd" />
+    <None Include="Assets\Images\UWP tile and icon asset generator\Templates\Logo-TileLargeMedium.psd" />
+    <None Include="Assets\Images\UWP tile and icon asset generator\Templates\Logo-TileSmall.psd" />
+    <None Include="Assets\Images\UWP tile and icon asset generator\Templates\Logo-TileWide.psd" />
+    <None Include="Assets\Images\UWP tile and icon asset generator\Templates\SplashScreen.psd" />
+    <None Include="Assets\Images\UWP tile and icon asset generator\Templates\StoreLogo.psd" />
+    <None Include="Assets\Images\UWP tile and icon asset generator\Windows UWP v1.2 for Mac.atn" />
+    <None Include="Assets\Images\UWP tile and icon asset generator\Windows UWP v1.2 for Windows.atn" />
     <None Include="SteamUWP.UI_TemporaryKey.pfx" />
+    <PRIResource Include="Strings\zh-CN\Resources.resw" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Images\1.jpg" />
+    <Content Include="Assets\Images\2.jpg" />
+    <Content Include="Assets\Images\3.jpg" />
+    <Content Include="Assets\Images\bg.jpg" />
+    <Content Include="Assets\Images\avatar.jpg" />
+    <Content Include="Assets\Images\bird.png" />
+    <Content Include="Assets\Images\shenshe.png" />
+    <Content Include="Assets\Images\th.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -125,11 +149,28 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Pages\DetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.0.6</Version>
     </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.UI.Controls">
+      <Version>2.2.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SteamUWP.Services\SteamUWP.Services.csproj">
+      <Project>{47b7aa07-ff96-4b3a-9e2e-47ec9e6334c6}</Project>
+      <Name>SteamUWP.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SteamUWP.ViewModels\SteamUWP.ViewModels.csproj">
+      <Project>{ab374e91-c2a4-4fe4-bb91-aa88b4d9d89c}</Project>
+      <Name>SteamUWP.ViewModels</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
