@@ -8,5 +8,6 @@
 
     <Application.Resources>
         <viewmodels:ViewModel x:Key="ViewModel"/>
+        <viewmodels:AppSettings x:Key="AppSettings"/>
     </Application.Resources>
 </Application>

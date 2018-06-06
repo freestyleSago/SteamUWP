@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <AssemblyName>Steam.Domain</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Sago.Framework.Domain">
+      <HintPath>..\..\..\..\..\Sago.VisualStudio.Com\Framework\Sago.Framework\Sago.Framework.Domain\bin\Debug\netcoreapp2.0\Sago.Framework.Domain.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

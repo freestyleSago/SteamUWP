@@ -8,7 +8,16 @@
     xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
     xmlns:media="using:Windows.UI.Xaml.Media"
     mc:Ignorable="d">
-
+    <Page.Transitions>
+        <TransitionCollection>
+            <NavigationThemeTransition>
+                <NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                    <SlideNavigationTransitionInfo/>
+                </NavigationThemeTransition.DefaultNavigationTransitionInfo>
+            </NavigationThemeTransition>
+        </TransitionCollection>
+    </Page.Transitions>
+    
     <Page.Resources>
     </Page.Resources>
 
@@ -127,7 +136,7 @@
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
-                                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE722;" FontSize="50"/>
+                                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE723;" FontSize="50"/>
                                 <TextBlock Grid.Column="1" Text="DLC" Style="{StaticResource SubheaderTextBlockStyle}" Margin="20,0,0,0"/>
                                 <ListView Grid.Row="1" Grid.Column="1" SelectionMode="None">
                                     <ListViewItem HorizontalContentAlignment="Stretch">

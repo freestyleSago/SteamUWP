@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -31,6 +32,8 @@ namespace SteamUWP.UI
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            var dateTime = DateTime.Now;
+
             if (e.NavigationMode == NavigationMode.Back)
             {
                 return;
@@ -41,11 +44,11 @@ namespace SteamUWP.UI
             }
         }
 
-        private void NavigationView_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
+        private async void NavigationView_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
         {
             if (args.IsSettingsSelected)
             {
-                return;
+                this.Frame.Navigate(typeof(SignInPage));
             }
             else
             {

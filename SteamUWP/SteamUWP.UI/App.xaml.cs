@@ -81,9 +81,9 @@ namespace SteamUWP.UI
                 Window.Current.Activate();
 
                 CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
-                var titleBar = ApplicationView.GetForCurrentView().TitleBar;
-                titleBar.ButtonBackgroundColor = Colors.Transparent;
-                titleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
+                //var titleBar = ApplicationView.GetForCurrentView().TitleBar;
+                //titleBar.ButtonBackgroundColor = Colors.Transparent;
+                //titleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
                 //ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.Auto;
             }
         }
